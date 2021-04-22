@@ -4,6 +4,11 @@ var http = require("http");
 var url = require("url");
 var app = require('express')();
 
+
+const hostname = '0.0.0.0';
+// use port 3000 unless there exists a preconfigured port
+const port = 3000;
+
 http.createServer(function(request, response){
     response.writeHead(200, {"Content-Type":"text/plain"});
     var params = url.parse(request.url,true).query;
@@ -69,4 +74,6 @@ http.createServer(function(request, response){
     response.writeHead(301,{Location: resetLocation});
     response.end();
 
-}).listen(process.env.PORT);
+
+
+}).listen(port, hostname);
