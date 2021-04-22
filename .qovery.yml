@@ -1,0 +1,11 @@
+---
+application:
+  name: "serviceform-carousel-api2"
+  project: "serviceform-carousel-api2"
+  organization: "QoveryCommunity"
+routers:
+- name: "main-serviceform-carousel-api2"
+  routes:
+  - application_name: "serviceform-carousel-api2"
+    paths:
+    - "/*"
